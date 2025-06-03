@@ -1,10 +1,10 @@
-import React from 'react'
-import Navbar from './components/navbar/Navbar'
+
+import SobreNos from './pages/sobrenos/SObreNos'
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <SobreNos />
     </div>
   )
 }
