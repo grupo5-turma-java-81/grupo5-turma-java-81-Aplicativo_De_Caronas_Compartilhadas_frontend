@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 interface Participante {
   nome: string;
@@ -21,26 +21,24 @@ const SobreNos: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-800 dark:bg-gray-900 dark:text-white">
-      {/* Imagem grande com texto */}
       <div className="relative w-full h-[400px]">
         <img
           src="src/assets/unsplash_JgEtmgOjoew.png"
           alt="Caronas"
           className="object-cover w-full h-full"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-8">
+        <div className="absolute inset-0 bg-black/40 flex flex-col gap-5 items-center justify-center p-8">
+            <img src="src/assets/img/Logo.png"/>
           <p className="text-white text-xl md:text-2xl lg:text-3xl max-w-4xl text-center">
-            A nossa empresa nasceu da vontade de conectar pessoas que compartilham trajetos diários, reduzindo custos e ajudando o meio ambiente. Em 2025 resolvemos promover caronas seguras, colaborativas e conscientes.
+            A nossa empresa nasceu da vontade de conectar pessoas que compartilham trajetos diários e viagens, reduzindo custos e ajudando o meio ambiente. Em 2025 resolvemos promover karonas seguras, colaborativas e conscientes.
           </p>
         </div>
       </div>
-
-      {/* Missão */}
-      <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div className="relative bg-blue-800/35 max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <div>
           <h3 className="text-xl font-semibold mb-2">Missão</h3>
           <p>
-            Oferecer uma plataforma segura para caronas compartilhadas com foco em sustentabilidade e comunidade.
+            Oferecer uma plataforma segura para< p className="font-semibold">karonas compartilhadas</p> com foco em sustentabilidade e comunidade.
           </p>
         </div>
         <div>
@@ -56,27 +54,31 @@ const SobreNos: React.FC = () => {
           </p>
         </div>
       </div>
-
-      {/* Participantes */}
       <div className="max-w-4xl mx-auto pb-16 text-center">
-        <h2 className="text-2xl font-bold mb-6">Conheça o time</h2>
+        <h2 className="text-2xl font-bold text-blue-1000 mb-6">Conheça o time</h2>
         <div className="flex flex-wrap justify-center gap-6">
           {participantes.map((p, index) => (
-            <a
-              key={index}
-              href={p.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center hover:scale-105 transition-transform"
+            <div
+                key={index}
+                className="flex flex-col items-center hover:scale-105 transition-transform"
             >
-              <img
+                <img
                 src={p.foto}
                 alt={p.nome}
                 className="w-auto h-[142px] rounded-full object-cover"
-              />
-              <span className="mt-2 text-sm font-medium">{p.nome}</span>
-              <FaGithub className="text-xl mt-1" />
-            </a>
+                />
+                <span className="mt-2 text-sm font-medium">{p.nome}</span>
+
+                {/* Ícones */}
+                <div className="flex gap-2 mt-1">
+                <a href={p.github} target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="text-xl hover:text-gray-600" />
+                </a>
+                <a href={p.linkedin} target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="text-xl text-blue-600 hover:text-blue-800" />
+                </a>
+                </div>
+             </div>          
           ))}
         </div>
       </div>
