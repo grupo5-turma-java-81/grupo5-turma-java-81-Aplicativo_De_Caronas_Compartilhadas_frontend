@@ -3,7 +3,7 @@ import { GithubLogoIcon } from "@phosphor-icons/react"
 function Footer() {
   return (
         <>
-            <div className="flex justify-center dark:bg-gray-900 text-white">
+            <div className="flex justify-center dark:bg-gray-900 bg-gradient-to-r from-darkgray-800 to-gray-700 text-white">
                 <div className="container flex flex-col items-center py-4">
                     <p className='text-xl font-bold'>
                         Javasons Five | Criado em: {2025}
