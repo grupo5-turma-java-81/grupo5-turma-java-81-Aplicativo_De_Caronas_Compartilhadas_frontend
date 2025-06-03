@@ -1,5 +1,5 @@
 
-import SobreNos from './pages/sobrenos/SObreNos'
+import SobreNos from './pages/sobrenos/SobreNos'
 
 function App() {
   return (
