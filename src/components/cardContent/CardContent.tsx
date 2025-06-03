@@ -4,7 +4,7 @@ import perfil from '../../assets/img/perfil.png';
 
 export default function CardContent() {
   return (
-    <div className='w-[700px] px-6 py-4 border border-blue-500 rounded-md'>
+    <div className='w-[700px] px-6 py-4 border border-blue-500 rounded-md cursor-pointer hover:shadow-lg transition-shadow duration-300 bg-white'>
       <div className="flex justify-between items-center">
         <section className='flex items-center gap-8'>
           <div className='flex items-center gap-4'>
